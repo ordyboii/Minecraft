@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+canvas {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%;
+  font-size: 32px;
+  color: white;
+
+  &[data-texture] {
+    scale: 5;
+  }
+
+  & > img[data-active="true"] {
+    border: 2px solid red;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  & > button:active {
+    scale: 0.8;
+  }
+
+  & button {
+    background: whitesmoke;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    color: black;
+  }
+}
